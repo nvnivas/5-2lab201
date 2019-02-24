@@ -81,8 +81,7 @@ function sumArray(sumArr) { //eslint-disable-line
     sumTotal = sum(sumTotal, sumArr[i])[0];
     sumTotalStr = sumTotalStr + sumArr[i];
     if(i < sumArr.length - 1)
-      sumTotalStr = sumTotalStr+',';
-    console.log('sumTotalStr:: ', sumTotalStr);  
+      sumTotalStr = sumTotalStr+','; 
   }
   console.log('sumTotal::', sumTotal);
   sumTotalStr = sumTotalStr + ' was passed in as an array of numbers, and '+sumTotal+' is their sum.';
@@ -115,8 +114,7 @@ function multiplyArray(multArr) { //eslint-disable-line
     multiplyTotal = multiply(multiplyTotal, multArr[i])[0];
     multiplyTotalStr = multiplyTotalStr + multArr[i];
     if(i < multArr.length - 1)
-      multiplyTotalStr = multiplyTotalStr+',';
-    console.log('multiplyTotalStr:: ', multiplyTotalStr);  
+      multiplyTotalStr = multiplyTotalStr+','; 
   }
   console.log('multiplyTotal::', multiplyTotal);
   multiplyTotalStr = multiplyTotalStr + ' have a product of '+multiplyTotal+'.';
@@ -150,10 +148,11 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+  //multiplyArray is already written to handle dynamic arrays
+  return multiplyArray(dynamicArray);
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
